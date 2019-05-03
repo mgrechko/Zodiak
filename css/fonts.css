@@ -19,3 +19,11 @@
 	font-style: normal;
 	font-weight: normal;
 }
+/*font-family: "OpenSans-Normal";*/
+@font-face {
+	font-family: "OpenSans-Normal";
+	src: url("../fonts/opensans/opensans.woff") format("woff"),
+	url("../fonts/opensans/opensans.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
