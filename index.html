@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Zodiak</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header class="header">
 		<div class="burger-menu">
 			<a href="#" class="burger-menu-button">
 				<span class="burger-menu-lines"></span>
@@ -44,7 +46,7 @@
 							<a href="tel:+734534523454" class="link-border">+7 (345) 345 234 54</a>
 						</div>
 					</div>
-					<button class="header-reservation burger-reservation"><a class="blue-button-bold-font" href="#">Забронировать</a></button>
+					<button class="header-reservation burger-reservation big-b"><a class="blue-button-bold-font" href="#">Забронировать</a></button>
 				</div>
 			</div>
 			<div class="burger-menu-overlay"></div>
@@ -83,7 +85,7 @@
 						<a class="futura-book-font link-border" href="tel:+734534523454">+7 (345) 345 234 54</a>
 					</div>
 					</div>
-					<button class="header-reservation"><a class="blue-button-bold-font" href="#">Забронировать</a></button>
+					<button class="header-reservation big-b"><a class="blue-button-bold-font" href="#">Забронировать</a></button>
 				</div>
 			</div>
 		</div>
@@ -96,32 +98,39 @@
 	</header>
 	<main>
 		<div class="desc-block">
-			<div id="desc-slider" class="desc-carousel">
+			<div class="desc-carousel">
 				<div class="slides">
-					<div class="slide change">
+					<div class="slide">
 						<img src="img/desc_slide1.jpg" alt="">
 					</div>
-					<div class="slide change">
+					<div class="slide">
 						<img src="img/desc_slide2.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="img/desc_slide3.jpg" alt="">
 					</div>
 				</div>
 			</div>
 			<div class="wrapper">
-				<a id="prev" class="prev nav-arrows-design" onclick="minusSlides(1)"></a>
-				<a id="next" class="next nav-arrows-design" onclick="plusSlides(1)"></a>
+				<a class="prev nav-arrows-design"></a>
+				<a class="next nav-arrows-design"></a>
 				<div class="desc">
 					<div class="desc-stars">
 						<img src="img/star.png" alt="">
 						<img src="img/star.png" alt="">
 						<img src="img/star.png" alt="">
 					</div>
-					<p class="desc-title">Zodiak</p>
-					<p class="desc-desc futura-book-font">отель в центре Москвы</p>
+					<div class="desc-title">
+						<p>Zodiak</p>
+					</div>
+					<div class="desc-desc futura-book-font">
+						<p>отель в центре Москвы</p>
+					</div>
 					<div class="desc-line"></div>
 					<div class="desc-price"><p class="low">номера от </p><p class="big"> 1 000 </p><p class="low"> руб. час/сутки</p></div>
 					<div class="desc-buttons">
-						<button class="hover-button"><a href="#" class="white-button-book-font futura-book-font">Забронировать</a></button>
-						<button class="hover-button"><a href="#" class="white-button-book-font futura-book-font">Смотреть номера</a></button>
+						<button class="hover-button standart-b adaptive-b"><a href="#" class="white-button-book-font futura-book-font">Забронировать</a></button>
+						<button class="hover-button standart-b adaptive-b"><a href="#" class="white-button-book-font futura-book-font">Смотреть номера</a></button>
 					</div>
 				</div>
 				<div class="mouse-scroll">
@@ -183,7 +192,7 @@
 					</div>
 				</div>
 				<div class="button-block">
-					<input type="submit" value="Поиск" class="blue-button-bold-font">
+					<input type="submit" value="Поиск" class="blue-button-bold-font small-b">
 				</div>
 			</form>
 		</div>
@@ -191,7 +200,7 @@
 			<div class="room-container">
 				<div class="room-items futura-book-font">
 					<div class="room-services">
-						<div class="wifi">					
+						<div>					
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 							<g>
@@ -211,7 +220,7 @@
 							</svg>
 							<p>wi-fi</p>
 						</div>
-						<div class="shower">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 							<g>
@@ -233,7 +242,7 @@
 							</svg>
 							<p>Душ</p>
 						</div>
-						<div class="tv">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 							<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -267,7 +276,7 @@
 							</svg>
 							<p>tv</p>
 						</div>
-						<div class="conditioner">
+						<div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 							<g transform="translate(1 1)">
@@ -305,14 +314,18 @@
 							<p>Кондиционер</p>
 						</div>
 					</div>
-					<p class="room-name">America LUX</p>
-					<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					<div class="room-name">
+						<p>America LUX</p>
+					</div>
+					<div class="room-desc standart-font">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					</div>
 					<div class="prices">
-						<p class="hour-price"><span>2 000</span> руб./час</p>
-						<p class="daily-price"><span>9 000</span> руб./сутки</p>
+						<p><span>2 000</span> руб./час</p>
+						<p><span>9 000</span> руб./сутки</p>
 					</div>
 					<div class="reserv-view">
-						<button class="hover-button"><a href="#" class="white-button-bold-font">Забронировать</a></button>
+						<button class="hover-button standart-b"><a href="#" class="white-button-bold-font">Забронировать</a></button>
 						<div class="view-room">
 							<a href="#">
 								<svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="27" height="17"><defs><style></style></defs><title/><path class="cls-1" d="M1,24a26.85,26.85,0,0,1,46,0"/><path class="cls-1" d="M1,24a26.85,26.85,0,0,0,46,0"/><ellipse class="cls-1" cx="24" cy="24" rx="6.93" ry="6.78"/></svg>
@@ -326,7 +339,7 @@
 			<div class="room-container">
 				<div class="room-items futura-book-font">
 					<div class="room-services">
-						<div class="wifi">					
+						<div>					
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 							<g>
@@ -346,7 +359,7 @@
 							</svg>
 							<p>wi-fi</p>
 						</div>
-						<div class="shower">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 							<g>
@@ -368,7 +381,7 @@
 							</svg>
 							<p>Душ</p>
 						</div>
-						<div class="tv">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 							<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -402,7 +415,7 @@
 							</svg>
 							<p>tv</p>
 						</div>
-						<div class="conditioner">
+						<div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 							<g transform="translate(1 1)">
@@ -440,14 +453,18 @@
 							<p>Кондиционер</p>
 						</div>
 					</div>
-					<p class="room-name">America LUX</p>
-					<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					<div class="room-name">
+						<p>America LUX</p>
+					</div>
+					<div class="room-desc standart-font">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					</div>
 					<div class="prices">
-						<p class="hour-price"><span>2 000</span> руб./час</p>
-						<p class="daily-price"><span>9 000</span> руб./сутки</p>
+						<p><span>2 000</span> руб./час</p>
+						<p><span>9 000</span> руб./сутки</p>
 					</div>
 					<div class="reserv-view">
-						<button class="hover-button"><a href="#" class="white-button-bold-font">Забронировать</a></button>
+						<button class="hover-button standart-b"><a href="#" class="white-button-bold-font">Забронировать</a></button>
 						<div class="view-room">
 							<a href="#">
 								<svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="27" height="17"><defs><style></style></defs><title/><path class="cls-1" d="M1,24a26.85,26.85,0,0,1,46,0"/><path class="cls-1" d="M1,24a26.85,26.85,0,0,0,46,0"/><ellipse class="cls-1" cx="24" cy="24" rx="6.93" ry="6.78"/></svg>
@@ -461,7 +478,7 @@
 			<div class="room-container">
 				<div class="room-items futura-book-font">
 					<div class="room-services">
-						<div class="wifi">					
+						<div>					
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 							<g>
@@ -481,7 +498,7 @@
 							</svg>
 							<p>wi-fi</p>
 						</div>
-						<div class="shower">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 							<g>
@@ -503,7 +520,7 @@
 							</svg>
 							<p>Душ</p>
 						</div>
-						<div class="tv">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 							<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -537,7 +554,7 @@
 							</svg>
 							<p>tv</p>
 						</div>
-						<div class="conditioner">
+						<div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 							<g transform="translate(1 1)">
@@ -575,14 +592,18 @@
 							<p>Кондиционер</p>
 						</div>
 					</div>
-					<p class="room-name">America LUX</p>
-					<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					<div class="room-name">
+						<p>America LUX</p>
+					</div>
+					<div class="room-desc standart-font">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					</div>
 					<div class="prices">
-						<p class="hour-price"><span>2 000</span> руб./час</p>
-						<p class="daily-price"><span>9 000</span> руб./сутки</p>
+						<p><span>2 000</span> руб./час</p>
+						<p><span>9 000</span> руб./сутки</p>
 					</div>
 					<div class="reserv-view">
-						<button class="hover-button"><a href="#" class="white-button-bold-font">Забронировать</a></button>
+						<button class="hover-button standart-b"><a href="#" class="white-button-bold-font">Забронировать</a></button>
 						<div class="view-room">
 							<a href="#">
 								<svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="27" height="17"><defs><style></style></defs><title/><path class="cls-1" d="M1,24a26.85,26.85,0,0,1,46,0"/><path class="cls-1" d="M1,24a26.85,26.85,0,0,0,46,0"/><ellipse class="cls-1" cx="24" cy="24" rx="6.93" ry="6.78"/></svg>
@@ -596,7 +617,7 @@
 			<div class="room-container">
 				<div class="room-items futura-book-font">
 					<div class="room-services">
-						<div class="wifi">					
+						<div>					
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 							<g>
@@ -616,7 +637,7 @@
 							</svg>
 							<p>wi-fi</p>
 						</div>
-						<div class="shower">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 							<g>
@@ -638,7 +659,7 @@
 							</svg>
 							<p>Душ</p>
 						</div>
-						<div class="tv">
+						<div>
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 							<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -672,7 +693,7 @@
 							</svg>
 							<p>tv</p>
 						</div>
-						<div class="conditioner">
+						<div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 							<g transform="translate(1 1)">
@@ -710,14 +731,18 @@
 							<p>Кондиционер</p>
 						</div>
 					</div>
-					<p class="room-name">America LUX</p>
-					<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					<div class="room-name">
+						<p>America LUX</p>
+					</div>
+					<div class="room-desc standart-font">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+					</div>
 					<div class="prices">
-						<p class="hour-price"><span>2 000</span> руб./час</p>
-						<p class="daily-price"><span>9 000</span> руб./сутки</p>
+						<p><span>2 000</span> руб./час</p>
+						<p><span>9 000</span> руб./сутки</p>
 					</div>
 					<div class="reserv-view">
-						<button class="hover-button"><a href="#" class="white-button-bold-font">Забронировать</a></button>
+						<button class="hover-button standart-b"><a href="#" class="white-button-bold-font">Забронировать</a></button>
 						<div class="view-room">
 							<a href="#">
 								<svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="27" height="17"><defs><style></style></defs><title/><path class="cls-1" d="M1,24a26.85,26.85,0,0,1,46,0"/><path class="cls-1" d="M1,24a26.85,26.85,0,0,0,46,0"/><ellipse class="cls-1" cx="24" cy="24" rx="6.93" ry="6.78"/></svg>
@@ -731,7 +756,9 @@
 		</div>
 		<div class="available-rooms-container">
 			<div id="slider-wrapper" class="wrapper">
-				<p class="av-rooms-title title futura-book-font">Свободные номера</p>
+				<div class="av-rooms-title title futura-book-font">
+					<p>Свободные номера</p>
+				</div>
 				<div id="slider-rooms">
 					<div id="line">
 						<div class="room change">
@@ -740,11 +767,15 @@
 							</div>
 							<div class="room-info">
 								<div class="room-info-container">
-									<p class="room-name futura-book-font">America LUX</p>
-									<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									<div class="room-name futura-book-font">
+										<p>America LUX</p>
+									</div>
+									<div class="room-desc standart-font">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									</div>
 									<a class="view-link link-border futura-bold-font" href="#">смотреть номер</a>
 									<div class="room-services">
-										<div class="wifi">					
+										<div>					
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 											<g>
@@ -764,7 +795,7 @@
 											</svg>
 											<p>wi-fi</p>
 										</div>
-										<div class="shower">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 											<g>
@@ -786,7 +817,7 @@
 											</svg>
 											<p>Душ</p>
 										</div>
-										<div class="tv">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 											<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -820,7 +851,7 @@
 											</svg>
 											<p>tv</p>
 										</div>
-										<div class="conditioner">
+										<div>
 											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 											<g transform="translate(1 1)">
@@ -859,10 +890,10 @@
 										</div>
 									</div>
 									<div class="reserv-price">
-										<button class=""><a href="#" class="blue-button-bold-font">Забронировать</a></button>
+										<button class="standart-b"><a href="#" class="blue-button-bold-font">Забронировать</a></button>
 										<div class="prices">
-											<p class="hour-price"><span>500</span> руб./час</p>
-											<p class="daily-price"><span>7 000</span> руб./сутки</p>
+											<p><span>500</span> руб./час</p>
+											<p><span>7 000</span> руб./сутки</p>
 										</div>
 									</div>
 								</div>
@@ -874,11 +905,15 @@
 							</div>
 							<div class="room-info">
 								<div class="room-info-container">
-									<p class="room-name futura-book-font">America LUX</p>
-									<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									<div class="room-name futura-book-font">
+										<p>America LUX</p>
+									</div>
+									<div class="room-desc standart-font">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									</div>
 									<a class="view-link link-border futura-bold-font" href="#">смотреть номер</a>
 									<div class="room-services">
-										<div class="wifi">					
+										<div>					
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 											<g>
@@ -898,7 +933,7 @@
 											</svg>
 											<p>wi-fi</p>
 										</div>
-										<div class="shower">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 											<g>
@@ -920,7 +955,7 @@
 											</svg>
 											<p>Душ</p>
 										</div>
-										<div class="tv">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 											<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -954,7 +989,7 @@
 											</svg>
 											<p>tv</p>
 										</div>
-										<div class="conditioner">
+										<div>
 											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 											<g transform="translate(1 1)">
@@ -993,10 +1028,10 @@
 										</div>
 									</div>
 									<div class="reserv-price">
-										<button class=""><a href="#" class="blue-button-bold-font">Забронировать</a></button>
+										<button class="standart-b"><a href="#" class="blue-button-bold-font">Забронировать</a></button>
 										<div class="prices">
-											<p class="hour-price"><span>502</span> руб./час</p>
-											<p class="daily-price"><span>7 002</span> руб./сутки</p>
+											<p><span>500</span> руб./час</p>
+											<p><span>7 000</span> руб./сутки</p>
 										</div>
 									</div>
 								</div>
@@ -1008,11 +1043,15 @@
 							</div>
 							<div class="room-info">
 								<div class="room-info-container">
-									<p class="room-name futura-book-font">America LUX</p>
-									<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									<div class="room-name futura-book-font">
+										<p>America LUX</p>
+									</div>
+									<div class="room-desc standart-font">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									</div>
 									<a class="view-link link-border futura-bold-font" href="#">смотреть номер</a>
 									<div class="room-services">
-										<div class="wifi">					
+										<div>					
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 											<g>
@@ -1032,7 +1071,7 @@
 											</svg>
 											<p>wi-fi</p>
 										</div>
-										<div class="shower">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 											<g>
@@ -1054,7 +1093,7 @@
 											</svg>
 											<p>Душ</p>
 										</div>
-										<div class="tv">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 											<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -1088,7 +1127,7 @@
 											</svg>
 											<p>tv</p>
 										</div>
-										<div class="conditioner">
+										<div>
 											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 											<g transform="translate(1 1)">
@@ -1127,10 +1166,10 @@
 										</div>
 									</div>
 									<div class="reserv-price">
-										<button class=""><a href="#" class="blue-button-bold-font">Забронировать</a></button>
+										<button class="standart-b"><a href="#" class="blue-button-bold-font">Забронировать</a></button>
 										<div class="prices">
-											<p class="hour-price"><span>503</span> руб./час</p>
-											<p class="daily-price"><span>7 003</span> руб./сутки</p>
+											<p><span>500</span> руб./час</p>
+											<p><span>7 000</span> руб./сутки</p>
 										</div>
 									</div>
 								</div>
@@ -1142,11 +1181,15 @@
 							</div>
 							<div class="room-info">
 								<div class="room-info-container">
-									<p class="room-name futura-book-font">America LUX</p>
-									<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									<div class="room-name futura-book-font">
+										<p>America LUX</p>
+									</div>
+									<div class="room-desc standart-font">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									</div>
 									<a class="view-link link-border futura-bold-font" href="#">смотреть номер</a>
 									<div class="room-services">
-										<div class="wifi">					
+										<div>					
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 											<g>
@@ -1166,7 +1209,7 @@
 											</svg>
 											<p>wi-fi</p>
 										</div>
-										<div class="shower">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 											<g>
@@ -1188,7 +1231,7 @@
 											</svg>
 											<p>Душ</p>
 										</div>
-										<div class="tv">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 											<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -1222,7 +1265,7 @@
 											</svg>
 											<p>tv</p>
 										</div>
-										<div class="conditioner">
+										<div>
 											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 											<g transform="translate(1 1)">
@@ -1261,10 +1304,10 @@
 										</div>
 									</div>
 									<div class="reserv-price">
-										<button class=""><a href="#" class="blue-button-bold-font">Забронировать</a></button>
+										<button class="standart-b"><a href="#" class="blue-button-bold-font">Забронировать</a></button>
 										<div class="prices">
-											<p class="hour-price"><span>504</span> руб./час</p>
-											<p class="daily-price"><span>7 004</span> руб./сутки</p>
+											<p><span>500</span> руб./час</p>
+											<p><span>7 000</span> руб./сутки</p>
 										</div>
 									</div>
 								</div>
@@ -1276,11 +1319,15 @@
 							</div>
 							<div class="room-info">
 								<div class="room-info-container">
-									<p class="room-name futura-book-font">America LUX</p>
-									<p class="room-desc standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									<div class="room-name futura-book-font">
+										<p>America LUX</p>
+									</div>
+									<div class="room-desc standart-font">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+									</div>
 									<a class="view-link link-border futura-bold-font" href="#">смотреть номер</a>
 									<div class="room-services">
-										<div class="wifi">					
+										<div>					
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 54.908 54.908" style="enable-background:new 0 0 54.908 54.908;" xml:space="preserve" width="20" height="15">
 											<g>
@@ -1300,7 +1347,7 @@
 											</svg>
 											<p>wi-fi</p>
 										</div>
-										<div class="shower">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 215.5 215.5" style="enable-background:new 0 0 215.5 215.5;" xml:space="preserve" width="16" height="20">
 											<g>
@@ -1322,7 +1369,7 @@
 											</svg>
 											<p>Душ</p>
 										</div>
-										<div class="tv">
+										<div>
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 												 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25" height="20">
 											<path d="M378,428L378,428c0,5.5-4.5,10-10,10H144c-5.5,0-10-4.5-10-10l0,0c0-5.5,4.5-10,10-10h48h128h48
@@ -1356,7 +1403,7 @@
 											</svg>
 											<p>tv</p>
 										</div>
-										<div class="conditioner">
+										<div>
 											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 						viewBox="0 0 503.607 503.607" style="enable-background:new 0 0 503.607 503.607;" xml:space="preserve" width="20" height="20">
 											<g transform="translate(1 1)">
@@ -1395,10 +1442,10 @@
 										</div>
 									</div>
 									<div class="reserv-price">
-										<button class=""><a href="#" class="blue-button-bold-font">Забронировать</a></button>
+										<button class="standart-b"><a href="#" class="blue-button-bold-font">Забронировать</a></button>
 										<div class="prices">
-											<p class="hour-price"><span>505</span> руб./час</p>
-											<p class="daily-price"><span>7 005</span> руб./сутки</p>
+											<p><span>500</span> руб./час</p>
+											<p><span>7 000</span> руб./сутки</p>
 										</div>
 									</div>
 								</div>
@@ -1407,76 +1454,102 @@
 					</div>
 				</div>
 				<div class="dots">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-					<span class="dot" onclick="currentSlide(4)"></span>
-					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
 				</div>
-				<button class="all-rooms-button"><a href="#" class="blue-button-bold-font">Все номера</a></button>
+				<button class="all-rooms-button standart-long-b"><a href="#" class="blue-button-bold-font">Все номера</a></button>
 				<div class="slider-nav">
-					<a class="back nav-arrows-design" onclick="minusSlide(1)"></a>
-					<a class="forward nav-arrows-design" onclick="plusSlide(1)"></a>
+					<a class="back nav-arrows-design"></a>
+					<a class="forward nav-arrows-design"></a>
 				</div>
 			</div>
 		</div>
 		<div class="about-container">
 			<div class="about-container-content">
-				<p class="about-container-title title futura-book-font">Несколько слов об отеле</p>
-				<p class="about-container-desc standart-font">Отель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. ОктябрьскаяОтель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. ОктябрьскаяОтель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. </p>
+				<div class="about-container-title title futura-book-font">
+					<p>Несколько слов об отеле</p>
+				</div>
+				<div class="about-container-desc standart-font">
+					<p>Отель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. ОктябрьскаяОтель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. ОктябрьскаяОтель расположен на Ленинском проспекте, дом 15 (въезд со стороны ул. Малая Калужская). Парк Горького, живописнейшее место Москвы — через дорогу. До берега реки подать рукой! 7 минут пешком до м. Шаболовская, 15 мин. — до м. </p>
+				</div>
 				<button class="hover-button"><a href="#" class="white-button-book-font futura-book-font">узнать больше</a></button>
 			</div>
 		</div>
 		<div class="reviews-container">
 			<div class="wrapper">
-				<p class="reviews-container-title title futura-book-font">О нас тепло отзываются</p>
+				<div class="reviews-container-title title futura-book-font">
+					<p>О нас тепло отзываются</p>
+				</div>
 				<div class="reviews-block futura-book-font">
 					<div class="review-block">
 						<div class="review-block-content">
 							<a href="#" class="author-link link-border futura-book-font">vk.com/andey-novitskiy</a>
-							<p class="review-name">Андрей Новицкий</p>
-							<p class="review-text standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							<div class="review-name">
+								<p>Андрей Новицкий</p>
+							</div>
+							<div class="review-text standart-font">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							</div>
 							<a href="#" class="all-review-link link-border futura-book-font">Читать весь отзыв</a>
 						</div>
 					</div>
 					<div class="review-block">
 						<div class="review-block-content">
 							<a href="#" class="author-link link-border futura-book-font">vk.com/andey-novitskiy</a>
-							<p class="review-name">Андрей Новицкий</p>
-							<p class="review-text standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							<div class="review-name">
+								<p>Андрей Новицкий</p>
+							</div>
+							<div class="review-text standart-font">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							</div>
 							<a href="#" class="all-review-link link-border futura-book-font">Читать весь отзыв</a>
 						</div>
 					</div>
 					<div class="review-block">
 						<div class="review-block-content">
 							<a href="#" class="author-link link-border futura-book-font">vk.com/andey-novitskiy</a>
-							<p class="review-name">Андрей Новицкий</p>
-							<p class="review-text standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							<div class="review-name">
+								<p>Андрей Новицкий</p>
+							</div>
+							<div class="review-text standart-font">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							</div>
 							<a href="#" class="all-review-link link-border futura-book-font">Читать весь отзыв</a>
 						</div>
 					</div>
 					<div class="review-block">
 						<div class="review-block-content">
 							<a href="#" class="author-link link-border futura-book-font">vk.com/andey-novitskiy</a>
-							<p class="review-name">Андрей Новицкий</p>
-							<p class="review-text standart-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							<div class="review-name">
+								<p>Андрей Новицкий</p>
+							</div>
+							<div class="review-text standart-font">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque</p>
+							</div>
 							<a href="#" class="all-review-link link-border futura-book-font">Читать весь отзыв</a>
 						</div>
 					</div>
 				</div>
-				<button class="all-reviews-button"><a href="#" class="blue-button-bold-font">Все отзывы</a></button>
+				<button class="all-reviews-button standart-long-b"><a href="#" class="blue-button-bold-font">Все отзывы</a></button>
 			</div>
 		</div>
 		<div class="news-container futura-book-font">
 			<div class="wrapper">
-				<p class="news-container-title">Новости</p>
+				<div class="news-container-title">
+					<p class="news-container-title">Новости</p>
+				</div>
 				<div class="news-blocks">
 					<div class="news-block">
 						<div class="news-block-img">
 							<img src="img/news1-img.jpg" alt="">
 						</div>
 						<div class="news-block-content">
-							<p class="news-block-info">Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							<div class="news-block-info">
+								<p>Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							</div>
 							<a href="#" class="more-new-link link-border futura-book-font">Подробнее</a>
 						</div>
 					</div>
@@ -1485,7 +1558,9 @@
 							<img src="img/news2-img.jpg" alt="">
 						</div>
 						<div class="news-block-content">
-							<p class="news-block-info">Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							<div class="news-block-info">
+								<p>Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							</div>
 							<a href="#" class="more-new-link link-border futura-book-font">Подробнее</a>
 						</div>
 					</div>
@@ -1494,12 +1569,14 @@
 							<img src="img/news3-img.jpg" alt="">
 						</div>
 						<div class="news-block-content">
-							<p class="news-block-info">Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							<div class="news-block-info">
+								<p>Lorem Ipsum обычно используется в графических, печать и издательской индустрии</p>
+							</div>
 							<a href="#" class="more-new-link link-border futura-book-font">Подробнее</a>
 						</div>
 					</div>
 				</div>
-				<button class="all-news-button"><a href="#" class="blue-button-bold-font">Все новости</a></button>
+				<button class="all-news-button standart-long-b"><a href="#" class="blue-button-bold-font">Все новости</a></button>
 			</div>
 		</div>
 		<div class="contacts-container">
@@ -1509,7 +1586,9 @@
 					<a href="call:+74957484141" class="contacts-phone futura-book-font">+7 (495) 748 - 41 - 41</a>
 					<a href="call:+79167484141" class="contacts-phone futura-book-font">+7 (916) 748 - 41 - 41</a>
 				</div>
-				<p class="contacts-address">Москва, Ленинский пр-т. д.15</p>
+				<div class="contacts-address">
+					<p>Москва, Ленинский пр-т. д.15</p>
+				</div>
 				<a href="mailto:" class="contacts-email futura-book-font">zodiak-hotel@mail.ru</a>
 				<div class="contacts-socials-location">
 					<div class="contacts-socials">
@@ -1557,9 +1636,15 @@
 							</a>
 			</div>
 			<div class="footer-license futura-book-font">
-				<p><a href="#" class="link-border">Privacy Policy</a></p>
-				<p>© 2018 ZODIAK hotel. All right reserved</p>
-				<p class="developer">Created by <a href="#" class="link-border">Sheep.Fish</a></p>
+				<div>
+					<a href="#" class="link-border">Privacy Policy</a>
+				</div>
+				<div>
+					<p>© 2018 ZODIAK hotel. All right reserved</p>
+				</div>
+				<div class="developer">
+					<p>Created by <a href="#" class="link-border">Sheep.Fish</a></p>
+				</div>
 			</div>
 		</div>
 	</footer>

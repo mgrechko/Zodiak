@@ -16,12 +16,30 @@ button, .button-block input{
 	border: 3px solid #7397c7;
 	box-sizing: border-box;
 	display: block;
+	transition: all .3s linear;
 }
 button a,.button-block input{
 	text-transform: uppercase;
 }
+.small-b{
+	width: 150px;
+	height: 60px;
+}
+.big-b{
+	width: 221px;
+	height: 72px;
+}
+.standart-b{
+	width: 180px;
+	height: 60px;
+}
+.standart-long-b{
+	width: 190px;
+	height: 58px;
+}
 body{
 	font-family: 'FuturaPT-Bold', sans-serif;
+	overflow-x: hidden;
 }
 .futura-book-font{
 	font-family: 'FuturaPT-Book', sans-serif;
@@ -52,7 +70,7 @@ body{
 	text-transform: uppercase;
 	font-size: 36px;
 }
-header{
+.header{
 	height: auto;
 	padding-bottom: 20px;
 	padding-top: 17px;
@@ -215,8 +233,6 @@ header{
 	font-size: 18px;
 }
 .header-reservation{
-	height: 66px;
-	width: 215px;
 	margin-top: 6px;
 }
 .header-reservation a{
@@ -255,14 +271,17 @@ header{
     display: block;
 }
 .desc-carousel{
-	align-self: center;
 	z-index: 1;
+	overflow: hidden;
 }
 .desc-carousel .slides{
+	position: relative;
+	left: 0;
 	height: 100%;
+	transition: all ease 1s;
 }
 .desc-carousel .slide{
-	overflow: hidden;
+	float: left;
 }
 .desc-carousel .slide img{
 	display: block;
@@ -331,14 +350,18 @@ header{
 	margin-right: 24px;
 }
 .desc-title{
-	font-size: 6vw;
 	padding-top: 3.2%;
+}
+.desc-title p{
+	font-size: 6vw;
 	text-transform: uppercase;
 	line-height: 6vw;
 }
 .desc-desc{
-	font-size: 1.55vw;
 	margin-top: 0.7%;
+}
+.desc-desc p{
+	font-size: 1.55vw;
 }
 .desc-line{
 	width: 65%;
@@ -367,14 +390,6 @@ header{
 	justify-content: space-between;
 	width: 57%;
 }
-.desc-buttons button{
-	box-sizing: border-box;
-	width: 9.4vw;
-	height: 3.1vw;
-}
-.desc-buttons button a{
-	font-size: 0.75vw;
-}
 .mouse-scroll{
 	position: absolute;
 	left: 50%;
@@ -384,11 +399,31 @@ header{
 .mouse-scroll.scrolled{
 	display: none;
 }
-.mouse-scroll .img2,.mouse-scroll.img-change .img1{
-	display: none;
+.mouse-scroll img{
+	position: absolute;
+	left: 0;
+	transition: opacity .2s ease-in-out;
 }
-.mouse-scroll .img1,.mouse-scroll.img-change .img2{
-	display: block;
+@keyframes cf3FadeInOut {
+	0% {
+		opacity:1;
+	}
+	45% {
+		opacity:1;
+	}
+	55% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+.mouse-scroll img.img1 {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-direction: alternate;
 }
 .search-section{
 	padding: 30px 0;
@@ -456,9 +491,6 @@ header{
 	margin-left: 5%;
 }
 .button-block input{
-	width: 150px;
-	height: 60px;
-	box-sizing: border-box;
 	cursor: pointer;
 }
 .rooms-container{
@@ -536,9 +568,6 @@ header{
 	margin-top: 60px;
 }
 .reserv-view button{
-	box-sizing: border-box;
-	width: 180px;
-	height: 60px;
 	margin-right: 40px;
 }
 .view-room{
@@ -550,6 +579,7 @@ header{
 	text-transform: uppercase;
 	font-size: 14px;
 	color: #7397c7;
+	transition: all .3s linear;
 }
 .view-room svg{
 	fill:none;
@@ -557,6 +587,7 @@ header{
 	stroke-linejoin:round;
 	stroke-width:2px;
 	margin-right: 8px;
+	transition: all .3s linear;
 }
 .view-room a:hover, .view-room a:hover svg{
 	color: #ffffff;
@@ -596,10 +627,9 @@ header{
 	text-align: center;
 }
 .available-rooms-container .room .room-img img{
-	min-width: 100%;
-	/*min-height: 100%;*/
-	width: auto;
-	height: auto;
+	max-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
 }
 .available-rooms-container .room .room-info{
 	width: 50%;
@@ -640,10 +670,6 @@ header{
 	align-items: center;
 	margin-top: 51px;
 }
-.reserv-price button{
-	width: 180px;
-	height: 60px;
-}
 .reserv-price .prices, .reserv-price .prices span{
 	font-family: 'FuturaPT-Book', sans-serif;
 }
@@ -670,8 +696,6 @@ header{
 	background-color: #7397c7;
 }
 .all-rooms-button{
-	width: 190px;
-	height: 58px;
 	margin: 55px auto 0;
 }
 .slider-nav{
@@ -751,8 +775,6 @@ header{
 }
 .all-reviews-button{
 	margin: 50px auto 0;
-	width: 190px;
-	height: 58px;
 }
 .news-container{
 	text-align: center;
@@ -796,8 +818,6 @@ header{
 }
 .all-news-button{
 	margin: 96px auto 0;
-	width: 190px;
-	height: 58px;
 }
 #map{
 	height: 620px;
@@ -894,6 +914,95 @@ footer .wrapper{
 
 
 @media screen and (max-width: 1800px){
+	.adaptive-b{
+		width: 9.4vw;
+		height: 3.1vw;
+	}
+	.adaptive-b a{
+		font-size: 0.75vw;
+	}
+	.header-content{
+		justify-content: space-between;
+	}
+	.header-nav, .header-contacts{
+		margin-left: 0;
+		width: auto;
+	}
+	.header-nav li:not(:last-child), .h-contacts{
+		margin-right: 2%;
+		white-space:nowrap;
+	}
+}
+
+@media screen and (max-width: 1300px){
+	.header-contacts{
+		flex-direction: column;
+	}
+	.header-phone{
+		margin-top: 5px;
+	}
+	.h-contacts{
+		margin-bottom: 5px;
+	}
+	.big-b{
+		width: 180px;
+		height: 60px;
+	}
+	.desc-stars,.desc-line,.desc-buttons{
+		display: none;
+	}
+	.room-container, .available-rooms-container .room .room-img, .available-rooms-container .room .room-info{
+		width: 100%;
+	}
+	.room-container img, .available-rooms-container .room .room-img img{
+		height: 100%;
+		width: 100%;
+	}
+	.room-services, .room{
+		flex-wrap: wrap;
+	}
+	.available-rooms-container .room{
+		flex-direction: column-reverse;
+		height: 0;
+		height: 100%;
+	}
+	.reviews-block{
+		flex-wrap: wrap;
+	}
+	.review-block{
+		width: 49%;
+		margin-bottom: 20px;
+	}
+	.news-blocks{
+		flex-wrap: wrap;
+	}
+	.news-block{
+		width: 45%;
+		margin-bottom: 30px;
+	}
+
+}
+@media screen and (max-width: 1160px){
+	.header-content{
+		justify-content: flex-start;
+	}
+	.header-nav{
+		margin-left: 15%;
+	}
+	.header-contacts{
+		display: none;
+	}
+	.button-block{
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 1024px){
+	.mouse-scroll{
+		display: none;
+	}
+	.header-contacts.burger-contacts{
+		display: flex;
+	}
 	.burger-menu-nav{
 		display: block;
 	}
@@ -935,54 +1044,6 @@ footer .wrapper{
 	}
 
 }
-
-@media screen and (max-width: 1300px){
-	.desc-stars,.desc-line,.desc-buttons{
-		display: none;
-	}
-	.room-container, .available-rooms-container .room .room-img, .available-rooms-container .room .room-info{
-		width: 100%;
-	}
-	.room-container img, .available-rooms-container .room .room-img img{
-		height: 100%;
-		width: 100%;
-	}
-	.room-services, .room{
-		flex-wrap: wrap;
-	}
-	.available-rooms-container .room{
-		flex-direction: column-reverse;
-		height: 0;
-		height: 100%;
-	}
-	.reviews-block{
-		flex-wrap: wrap;
-	}
-	.review-block{
-		width: 49%;
-		margin-bottom: 20px;
-	}
-	.news-blocks{
-		flex-wrap: wrap;
-	}
-	.news-block{
-		width: 45%;
-		margin-bottom: 30px;
-	}
-
-}
-
-@media screen and (max-width: 1160px){
-	.header-contacts,.mouse-scroll{
-		display: none;
-	}
-	.header-contacts.burger-contacts{
-		display: flex;
-	}
-	.button-block{
-		margin-top: 20px;
-	}
-}
 @media screen and (max-width: 940px){
 	.info-block img{
 		display: none;
@@ -1004,9 +1065,13 @@ footer .wrapper{
 	}
 	.reviews-block{
 		justify-content: center;
+		text-align: center;
 	}
 	.review-block{
 		width: 90%;
+	}
+	.review-block-content{
+		margin: 50px auto 54px;
 	}
 	.news-blocks{
 		flex-wrap: wrap;
@@ -1040,6 +1105,87 @@ footer .wrapper{
 	}
 	.footer-license p{
 		margin-bottom: 20px;
+	}
+	.room .room-info .room-info-container{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.room-info .room-services{
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 530px){
+	.dropdown {
+	    right: 10%;
+	}
+	.desc-title p{
+		font-size: 30px;
+	}
+	.desc-desc,.desc-price .low{
+		font-size: 14px;
+	}
+	.desc-price{
+		display: none;
+	}
+	.prev, .next{
+		top: 45%;
+	}
+	.nav-arrows-design{
+		width: 30px;
+		height: 30px;
+	}
+	.room-name{
+		padding-top: 10px;
+	}
+	.prices,.reserv-view{
+		margin-top: 15px;
+	}
+	.reserv-view{
+		flex-direction: column;
+	}
+	.reserv-view button{
+		margin: 0 auto 10px;
+	}
+	.room .room-info .room-info-container{
+		width: 95%;
+	}
+	.reserv-price{
+		margin-top: 20px;
+		flex-direction: column;
+	}
+	.reserv-price .prices{
+		margin-left: 0;
+	}
+	.dots{
+		margin-top: 20px;
+	}
+	.all-rooms-button{
+		margin-top: 20px;
+	}
+	.slider-nav{
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: -50px;
+	}
+	.about-container-content{
+		width: 90%;
+	}
+	.news-block-img{
+		height: auto;
+		max-height: 200px;
+	}
+	.news-block-img img{
+		min-height: auto;
+	}
+	#map{
+		height: 300px;
+	}
+	.contacts-phone{
+		font-size: 24px;
+	}
+	.contacts-socials-location{
+		padding-top: 36px;
+		flex-direction: column;
 	}
 }
 @media screen and (max-width: 440px){

@@ -13,101 +13,113 @@ function burgerMenu(selector){
 		menu.toggleClass('burger-menu-active');
 
 		if(menu.hasClass('burger-menu-active')){
-			$('body').css('overflow','hidden')
+			$('body').css('overflow-y','hidden');
 		}
 		else{
-			$('body').css('overflow','visible');
+			$('body').css('overflow-y','visible');
 		}
 	}
 }
-
-burgerMenu('.burger-menu');
 //burger menu - end
 
 
 //mouse scroll - start
-var scroll = $('.mouse-scroll');
-var timer;
-autoSlider();
-
 function autoSlider() {
-	timer = setTimeout(function(){
-		scroll.toggleClass('img-change');
-		autoSlider();
-	}, 1000);
-} 
+	var scroll = $('.mouse-scroll');
+	if($(window).width() > 950){
+		window.onscroll = function() {
+			var heightPX = document.documentElement.scrollTop;
 
-if($(window).width() > 950){
-	window.onscroll = function() {
-		var heightPX = document.documentElement.scrollTop;
+			if (heightPX > 20) {
+				scroll.addClass('scrolled');
+			}
 
-		if (heightPX > 20) {
-			scroll.addClass('scrolled');
-		}
-
-		if (heightPX === 0) {
-			scroll.removeClass('scrolled');
+			if (heightPX === 0) {
+				scroll.removeClass('scrolled');
+			}
 		}
 	}
 }
 //mouse scroll - end
 
+
 //slider1 - start
-var slideIndex = 1;
-showSlides(slideIndex);
+function headerSlider(){
+	$(".slide").width($(window).width());
+	let slideWidth = $(".slide").width();
+	let left = 0;
 
-function minusSlides(n) {
-  showSlides(slideIndex -= n);
-}
+	$(".desc-carousel").width($(window).width());
+	$(".slides").width($(".slide").length * slideWidth);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+	var leftSwipe = "-" + ($(".slides").width() - $(".desc-carousel").width());
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  slides[slideIndex-1].style.display = "block"; 
+	$(".next").click(sliderNext);
+	$(".prev").click(sliderPrev);
+
+	function sliderNext(){
+		var line = $(".slides");
+		left = left - slideWidth;
+		let lineW = Number('-' + line.width());
+		if(left <= lineW){
+			left = 0;
+		}
+		line.css("left", left+"px");
+	}
+	function sliderPrev(){
+		var line = $(".slides");
+		left = left + slideWidth;
+		let lineW = Number('-'+line.width());
+		if(left > 0){
+			left = lineW + slideWidth;
+		}
+		line.css("left", left+"px");
+	}
 }
 //slider1 - end
 
 //slider2 - start
+function roomSlider(){
+	let itemIndex = 1;
+	let back = $('.back');
+	let forward = $('.forward');
+	let dotsList = $('.dot');
+	
+	roomSlides(itemIndex);
 
-var itemIndex = 1;
-roomSlides(itemIndex);
+	back.click(function(){
+		roomSlides(itemIndex -= 1)
+	});
+	forward.click(function(){
+		roomSlides(itemIndex += 1)
+	});
 
-function minusSlide(n) {
-	roomSlides(itemIndex -= n);
-}
+	dotsList.click(function(){
+		roomSlides(itemIndex = $(this).index()+1);
+	});
 
-function plusSlide(n) {
-  roomSlides(itemIndex += n);
-}
+	function roomSlides(n) {
+		let i;
+		let rooms = $('.room');
+		let dots = $('.dot');
+		if (n > rooms.length) {itemIndex = 1} 
+		if (n < 1) {itemIndex = rooms.length}
 
-function currentSlide(n) {
-  roomSlides(itemIndex = n);
-}
-
-function roomSlides(n) {
-	let i;
-	let rooms = document.getElementsByClassName("room");
-	let dots = document.getElementsByClassName("dot");
-	if (n > rooms.length) {itemIndex = 1} 
-	if (n < 1) {itemIndex = rooms.length}
-
-	for (i = 0; i < rooms.length; i++) {
-	  rooms[i].style.display = "none"; 
+		for (i = 0; i < rooms.length; i++) {
+			$(rooms[i]).css('display','none');
+		}
+		for (i = 0; i < dots.length; i++) {
+			$(dots[i]).removeClass('active');
+		}
+		$(dots[itemIndex-1]).addClass('active');
+		$(rooms[itemIndex-1]).css('display','flex');
 	}
-	for (i = 0; i < dots.length; i++) {
-	  dots[i].className = dots[i].className.replace(" active", "");
-	}
-	dots[itemIndex-1].className += " active";
-	rooms[itemIndex-1].style.display = "flex"; 
 }
-
 //slider2 - end
+
+$(document).ready(function(){
+	burgerMenu('.burger-menu');
+	autoSlider();
+	headerSlider();
+	roomSlider();
+});
