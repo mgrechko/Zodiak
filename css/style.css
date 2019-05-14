@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 a{
 	text-decoration: none;
@@ -20,6 +21,9 @@ button, .button-block input{
 }
 button a,.button-block input{
 	text-transform: uppercase;
+}
+img{
+	max-width: 100%;
 }
 .small-b{
 	width: 150px;
@@ -272,7 +276,7 @@ body{
 }
 .desc-carousel{
 	z-index: 1;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .desc-carousel .slides{
 	position: relative;
@@ -934,6 +938,13 @@ footer .wrapper{
 	}
 }
 
+@media screen and (max-width: 1460px) {
+	.big-b{
+		width: 180px;
+		height: 60px;
+	}
+}
+
 @media screen and (max-width: 1300px){
 	.header-contacts{
 		flex-direction: column;
@@ -943,10 +954,6 @@ footer .wrapper{
 	}
 	.h-contacts{
 		margin-bottom: 5px;
-	}
-	.big-b{
-		width: 180px;
-		height: 60px;
 	}
 	.desc-stars,.desc-line,.desc-buttons{
 		display: none;
