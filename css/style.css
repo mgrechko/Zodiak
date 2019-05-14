@@ -1110,7 +1110,7 @@ footer .wrapper{
 		flex-direction: column;
 		justify-content: center;
 	}
-	.footer-license p{
+	.footer-license div:not(:last-child){
 		margin-bottom: 20px;
 	}
 	.room .room-info .room-info-container{
